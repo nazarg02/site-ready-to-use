@@ -3,11 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Best Prop Firms 2025 — Kenpachi Trades</title>
+  <title>Best Prop Firms 2026 — Kenpachi Trades</title>
+  <meta name="description" content="Save on top prop firm challenges with verified discount codes. FundedSeat 60% off and Alpha Futures 15% off — hand-picked partners for funded traders." />
+  <meta name="keywords" content="prop firm discount, funded trader, FundedSeat discount, Alpha Futures discount, prop firm challenge, best prop firms 2026" />
+  <meta property="og:title" content="Best Prop Firms 2026 — Kenpachi Trades" />
+  <meta property="og:description" content="Verified discount codes for FundedSeat and Alpha Futures. Save up to 60% on your prop firm challenge." />
+  <meta property="og:url" content="https://kenpachitrades.com/prop-firms.html" />
+  <link rel="icon" type="image/png" href="images/logo.png" />
   <link rel="stylesheet" href="syle.css" />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 </head>
 <body>
+
+  <!-- GIVEAWAY POPUP -->
+  <div id="giveawayOverlay" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.72); z-index:9999; align-items:center; justify-content:center; padding:16px;">
+    <div onmouseenter="playNotif()" ontouchstart="playNotif()" style="background:linear-gradient(rgba(10,11,18,0.93),rgba(10,11,18,0.93)),url('images/fibonacci.png') center/cover; border:1px solid rgba(108,99,255,0.35); border-radius:20px; max-width:420px; width:100%; padding:40px 32px 32px; position:relative; box-shadow:0 24px 80px rgba(0,0,0,0.6); text-align:center;">
+      <button onclick="closeGiveaway()" style="position:absolute; top:14px; right:18px; background:none; border:none; color:rgba(255,255,255,0.4); font-size:1.5rem; cursor:pointer; line-height:1; padding:0;">&#x2715;</button>
+      <img src="images/logo.png" alt="Kenpachi Trades" style="width:72px; height:72px; object-fit:contain; border-radius:50%; margin:0 auto 20px; display:block;" />
+      <div style="display:inline-block; background:rgba(108,99,255,0.15); border:1px solid rgba(108,99,255,0.3); color:#a89cff; font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:4px 14px; border-radius:20px; margin-bottom:16px;">&#127873; Weekly Giveaway</div>
+      <h2 style="font-family:'Syne',sans-serif; font-size:1.5rem; font-weight:800; color:#fff; line-height:1.3; margin:0 0 10px; letter-spacing:-0.02em;">Take a Chance to Win a<br><span style="color:#6c63ff; font-size:1.9rem;">$150,000</span><br>Prop Firm Account</h2>
+      <p style="color:rgba(255,255,255,0.45); font-size:0.84rem; line-height:1.65; margin:0 0 24px;">Every week we give away a fully funded prop firm account. Enter your email for a chance to win — one new winner selected every week.</p>
+      <form name="giveaway" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleGiveaway(event, this)" style="display:flex; flex-direction:column; gap:10px;">
+        <input type="hidden" name="form-name" value="giveaway" />
+        <input name="bot-field" style="display:none;" />
+        <input type="email" name="email" placeholder="your@email.com" required style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:10px; padding:13px 16px; color:#fff; font-size:0.9rem; font-family:'Syne',sans-serif; outline:none; width:100%; box-sizing:border-box;" />
+        <button type="submit" style="background:#6c63ff; border:none; border-radius:10px; padding:13px; color:#fff; font-size:0.9rem; font-weight:700; font-family:'Syne',sans-serif; cursor:pointer;">Enter Giveaway</button>
+      </form>
+      <p id="giveawaySuccess" style="display:none; color:#4ade80; font-size:0.85rem; margin-top:14px; font-weight:600;">You're in! Good luck this week!</p>
+      <p style="color:rgba(255,255,255,0.25); font-size:0.72rem; margin-top:14px;">No purchase required. Winner contacted via email.</p>
+    </div>
+  </div>
 
   <header class="nav">
     <div class="container nav-inner">
@@ -32,7 +57,7 @@
   <!-- PAGE HERO -->
   <section class="page-hero">
     <div class="container">
-      <div class="label reveal">Verified Partners — 2025</div>
+      <div class="label reveal">Verified Partners — 2026</div>
       <h1 class="reveal reveal-delay-1">Our Partner <em>Prop Firms</em></h1>
       <p class="reveal reveal-delay-2">Hand-picked partners with verified discount codes. Use the codes below to save on your challenge fee.</p>
     </div>
@@ -50,10 +75,9 @@
             <div class="firm-icon" style="background:transparent; padding:0; overflow:hidden;"><img src="images/fundedseat-logo.png" alt="FundedSeat" style="width:48px; height:48px; object-fit:contain; border-radius:8px;" /></div>
             <div>
               <div class="firm-name">FundedSeat</div>
-              <div class="firm-stars">★★★★★</div>
+              <div class="firm-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
             </div>
           </div>
-
           <table class="firm-table">
             <tr><td>Max Account Size</td><td>$750,000</td></tr>
             <tr><td>Profit Split</td><td>90%</td></tr>
@@ -61,11 +85,10 @@
             <tr><td>Profit Target (Eval)</td><td>6%</td></tr>
             <tr><td>Min Trading Days</td><td>None</td></tr>
             <tr><td>Payout</td><td>Daily (within 5 hrs)</td></tr>
-            <tr><td>News Trading</td><td><span class="yes">✓</span> Always allowed</td></tr>
-            <tr><td>Overnight Holding</td><td><span class="no">✗</span> Day trade only</td></tr>
-            <tr><td>EAs / Bots</td><td><span class="no">✗</span> Not allowed</td></tr>
+            <tr><td>News Trading</td><td><span class="yes">&#10003;</span> Always allowed</td></tr>
+            <tr><td>Overnight Holding</td><td><span class="no">&#10007;</span> Day trade only</td></tr>
+            <tr><td>EAs / Bots</td><td><span class="no">&#10007;</span> Not allowed</td></tr>
           </table>
-
           <div class="code-box">
             <div><div class="code-box-label">Discount Code</div><div class="code-box-value" id="code-fs">B9IPBS</div></div>
             <div style="display:flex; align-items:center; gap:8px;">
@@ -83,22 +106,20 @@
             <div class="firm-icon" style="background:transparent; padding:0; overflow:hidden;"><img src="images/alpha-futures-logo.png" alt="Alpha Futures" style="width:48px; height:48px; object-fit:contain; border-radius:8px;" /></div>
             <div>
               <div class="firm-name">Alpha Futures</div>
-              <div class="firm-stars">★★★★★</div>
+              <div class="firm-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
             </div>
           </div>
-
           <table class="firm-table">
             <tr><td>Max Account Size</td><td>$150,000</td></tr>
             <tr><td>Profit Split</td><td>Up to 90%</td></tr>
             <tr><td>Drawdown Type</td><td>EOD Trailing</td></tr>
-            <tr><td>Profit Target (Eval)</td><td>$1.5K – $12K</td></tr>
+            <tr><td>Profit Target (Eval)</td><td>$1.5K - $12K</td></tr>
             <tr><td>Min Trading Days</td><td>3 days</td></tr>
             <tr><td>Payout</td><td>Up to 4x/month</td></tr>
-            <tr><td>News Trading</td><td><span class="yes">✓</span> 2-min buffer*</td></tr>
-            <tr><td>Overnight Holding</td><td><span class="no">✗</span> Day trade only</td></tr>
-            <tr><td>EAs / Bots</td><td><span class="yes">✓</span> Allowed</td></tr>
+            <tr><td>News Trading</td><td><span class="yes">&#10003;</span> 2-min buffer*</td></tr>
+            <tr><td>Overnight Holding</td><td><span class="no">&#10007;</span> Day trade only</td></tr>
+            <tr><td>EAs / Bots</td><td><span class="yes">&#10003;</span> Allowed</td></tr>
           </table>
-
           <div class="code-box">
             <div><div class="code-box-label">Discount Code</div><div class="code-box-value" id="code-af">Nazar019510</div></div>
             <div style="display:flex; align-items:center; gap:8px;">
@@ -121,59 +142,27 @@
           <table class="compare-table">
             <thead>
               <tr>
-                <th>Firm</th>
-                <th>Max Funding</th>
-                <th>Profit Split</th>
-                <th>Drawdown</th>
-                <th>Profit Target</th>
-                <th>News Trading</th>
-                <th>Overnight</th>
-                <th>Payout</th>
-                <th>Discount</th>
+                <th>Firm</th><th>Max Funding</th><th>Profit Split</th><th>Drawdown</th>
+                <th>Profit Target</th><th>News Trading</th><th>Overnight</th><th>Payout</th><th>Discount</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>FundedSeat</strong></td>
-                <td>$750,000</td>
-                <td>90%</td>
-                <td>EOD Trailing</td>
-                <td>6%</td>
-                <td><span class="yes">✓</span> Always</td>
-                <td><span class="no">✗</span></td>
-                <td>Daily</td>
-                <td>60% (B9IPBS)</td>
+                <td><strong>FundedSeat</strong></td><td>$750,000</td><td>90%</td><td>EOD Trailing</td>
+                <td>6%</td><td><span class="yes">&#10003;</span> Always</td><td><span class="no">&#10007;</span></td><td>Daily</td><td>60% (B9IPBS)</td>
               </tr>
               <tr>
-                <td><strong>Alpha Futures Standard</strong></td>
-                <td>$150,000</td>
-                <td>70→90%</td>
-                <td>EOD ~4%</td>
-                <td>$3K–$9K</td>
-                <td><span class="yes">✓</span> Eval / buffer funded</td>
-                <td><span class="no">✗</span></td>
-                <td>Bi-weekly</td>
+                <td><strong>Alpha Futures Standard</strong></td><td>$150,000</td><td>70-90%</td><td>EOD ~4%</td>
+                <td>$3K-$9K</td><td><span class="yes">&#10003;</span> Eval / buffer funded</td><td><span class="no">&#10007;</span></td><td>Bi-weekly</td>
                 <td rowspan="3" style="vertical-align:middle;">15% (Nazar019510)</td>
               </tr>
               <tr>
-                <td><strong>Alpha Futures Advanced</strong></td>
-                <td>$150,000</td>
-                <td>90%</td>
-                <td>EOD ~3.5%</td>
-                <td>$4K–$12K</td>
-                <td><span class="yes">✓</span> Always</td>
-                <td><span class="no">✗</span></td>
-                <td>Up to 4x/mo</td>
+                <td><strong>Alpha Futures Advanced</strong></td><td>$150,000</td><td>90%</td><td>EOD ~3.5%</td>
+                <td>$4K-$12K</td><td><span class="yes">&#10003;</span> Always</td><td><span class="no">&#10007;</span></td><td>Up to 4x/mo</td>
               </tr>
               <tr>
-                <td><strong>Alpha Futures Zero</strong></td>
-                <td>$100,000</td>
-                <td>90%</td>
-                <td>EOD ~4%</td>
-                <td>$1.5K–$6K</td>
-                <td><span class="yes">✓</span> Eval / buffer funded</td>
-                <td><span class="no">✗</span></td>
-                <td>Up to 4x/mo</td>
+                <td><strong>Alpha Futures Zero</strong></td><td>$100,000</td><td>90%</td><td>EOD ~4%</td>
+                <td>$1.5K-$6K</td><td><span class="yes">&#10003;</span> Eval / buffer funded</td><td><span class="no">&#10007;</span></td><td>Up to 4x/mo</td>
               </tr>
             </tbody>
           </table>
@@ -186,7 +175,7 @@
 
   <footer class="footer">
     <div class="container footer-bottom">
-      <div class="footer-copy">© 2026 Kenpachi Trades. All rights reserved.</div>
+      <div class="footer-copy">&#169; 2026 Kenpachi Trades. All rights reserved.</div>
       <div class="footer-disclaimer">This website is for educational purposes only and does not constitute financial advice. Trading involves significant risk of loss and is not suitable for all investors. Past performance is not indicative of future results. Always consult a licensed financial advisor before making investment decisions. Affiliate links may be present.</div>
     </div>
   </footer>
@@ -215,11 +204,50 @@
         btn.textContent = 'Copied!';
         btn.style.background = 'rgba(108,99,255,0.4)';
         setTimeout(() => { btn.textContent = 'Copy'; btn.style.background = 'rgba(255,255,255,0.1)'; }, 2000);
-      } catch(e) {
-        btn.textContent = 'Error';
-      }
+      } catch(e) { btn.textContent = 'Error'; }
       document.body.removeChild(textarea);
     }
+
+    const notifAudio = new Audio('sounds/universfield-new-notification-062-494544.mp3');
+    notifAudio.volume = 0.6;
+    let notifPlayed = false;
+
+    function playNotif() {
+      if (notifPlayed) return;
+      notifPlayed = true;
+      notifAudio.play().catch(() => {});
+    }
+
+    function showGiveaway() {
+      document.getElementById('giveawayOverlay').style.display = 'flex';
+    }
+    function closeGiveaway() {
+      document.getElementById('giveawayOverlay').style.display = 'none';
+      sessionStorage.setItem('giveawaySeen', '1');
+    }
+    function handleGiveaway(e, form) {
+      e.preventDefault();
+      const data = new FormData(form);
+      fetch('/', { method: 'POST', body: data })
+        .finally(() => {
+          form.style.display = 'none';
+          document.getElementById('giveawaySuccess').style.display = 'block';
+          setTimeout(closeGiveaway, 2500);
+        });
+    }
+
+    if (!sessionStorage.getItem('giveawaySeen')) {
+      const triggerGiveaway = () => {
+        showGiveaway();
+        notifAudio.play().catch(() => {});
+      };
+      document.addEventListener('scroll', triggerGiveaway, { once: true });
+      document.addEventListener('click', triggerGiveaway, { once: true });
+    }
+
+    document.getElementById('giveawayOverlay').addEventListener('click', function(e) {
+      if (e.target === this) closeGiveaway();
+    });
   </script>
 </body>
 </html>

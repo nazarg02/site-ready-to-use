@@ -10,11 +10,11 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg:           #151515;
-  --bg2:          #1a1a1a;
-  --bg3:          #202020;
-  --bg4:          #282828;
-  --nav-bg:       #0f0f0f;
+  --bg:           rgba(21,21,21,0.82);
+  --bg2:          rgba(26,26,26,0.85);
+  --bg3:          rgba(32,32,32,0.9);
+  --bg4:          rgba(40,40,40,0.94);
+  --nav-bg:       rgba(15,15,15,0.92);
   --blue:         #3646f5;
   --blue-dim:     #2538e0;
   --blue-bright:  #5566ff;
@@ -54,10 +54,14 @@
   50%       { transform: translateY(-8px); }
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  background: linear-gradient(rgba(10,11,18,0.92), rgba(10,11,18,0.92)), url('images/fibonacci.png') center/cover fixed;
+  background-color: #0d0e14;
+}
 
 body {
-  background: var(--bg);
+  background: transparent;
   color: var(--text);
   font-family: var(--font);
   font-size: 1rem;

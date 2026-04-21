@@ -164,8 +164,15 @@
   <script>
     const burger = document.getElementById('burger');
     const menu = document.getElementById('mobileMenu');
-    burger.addEventListener('click', () => menu.classList.toggle('open'));
-    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
+    const ticker = document.querySelector('.promo-ticker');
+    burger.addEventListener('click', () => {
+      menu.classList.toggle('open');
+      if (ticker) ticker.style.display = menu.classList.contains('open') ? 'none' : '';
+    });
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      menu.classList.remove('open');
+      if (ticker) ticker.style.display = '';
+    }));
 
     const observer = new IntersectionObserver(entries => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });

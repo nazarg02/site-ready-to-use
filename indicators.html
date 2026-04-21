@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Indicators — Kenpachi Trades</title>
+  <link rel="stylesheet" href="syle.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    .ind-slider { position: relative; width: 100%; border-radius: 10px; overflow: hidden; margin-bottom: 14px; background: #111; }
+    .ind-slider-track { display: flex; transition: transform 0.4s ease; }
+    .ind-slider-track img { min-width: 100%; width: 100%; height: 200px; object-fit: cover; display: block; }
+    .ind-slider-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.55); border: none; color: #fff; font-size: 1.6rem; line-height: 1; padding: 4px 12px; cursor: pointer; border-radius: 6px; z-index: 2; transition: background 0.2s; }
+    .ind-slider-btn:hover { background: rgba(108,99,255,0.7); }
+    .ind-slider-btn.prev { left: 8px; }
+    .ind-slider-btn.next { right: 8px; }
+    .ind-slider-dots { position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%); display: flex; gap: 6px; }
+    .ind-slider-dots span { width: 7px; height: 7px; border-radius: 50%; background: rgba(255,255,255,0.35); cursor: pointer; transition: background 0.2s; }
+    .ind-slider-dots span.active { background: #fff; }
+    .ind-slider-track img { cursor: zoom-in; }
+    .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.92); z-index: 9999; align-items: center; justify-content: center; }
+    .lightbox.open { display: flex; }
+    .lightbox img { max-width: 92vw; max-height: 92vh; object-fit: contain; border-radius: 8px; box-shadow: 0 0 60px rgba(0,0,0,0.8); }
+    .lightbox-close { position: absolute; top: 20px; right: 28px; font-size: 2.2rem; color: #fff; cursor: pointer; line-height: 1; opacity: 0.8; }
+    .lightbox-close:hover { opacity: 1; }
+    .lightbox-prev, .lightbox-next { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.1); border: none; color: #fff; font-size: 2.4rem; padding: 8px 18px; cursor: pointer; border-radius: 8px; transition: background 0.2s; }
+    .lightbox-prev:hover, .lightbox-next:hover { background: rgba(108,99,255,0.6); }
+    .lightbox-prev { left: 20px; }
+    .lightbox-next { right: 20px; }
+  </style>
+</head>
+<body>
+
+  <!-- PROMO TICKER -->
+  <div class="promo-ticker">
+    <div class="promo-ticker-track">
+      <span>Save 15% on your first purchase with code : Soul</span>
+      <span>Save 15% on your first purchase with code : Soul</span>
+      <span>Save 15% on your first purchase with code : Soul</span>
+      <span>Save 15% on your first purchase with code : Soul</span>
+      <span>Save 15% on your first purchase with code : Soul</span>
+      <span>Save 15% on your first purchase with code : Soul</span>
+      <span>Save 15% on your first purchase with code : Soul</span>
+      <span>Save 15% on your first purchase with code : Soul</span>
+    </div>
+  </div>
+
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="Kenpachi Trades Logo" class="logo-img" />
+        Kenpachi Trades
+      </a>
+      <nav class="nav-links">
+        <a href="prop-firms.html">Save On Prop Firms</a>
+        <a href="indicators.html" class="active">Indicators</a>
+        <a href="premium.html" class="nav-cta">Premium Access</a>
+      </nav>
+      <button class="burger" id="burger">&#9776;</button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="prop-firms.html">Save On Prop Firms</a>
+      <a href="indicators.html">Indicators</a>
+      <a href="premium.html">Premium Access</a>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="label reveal">TradingView — Pine Script</div>
+      <h1 class="reveal reveal-delay-1">Kenpachi <em>Indicators</em></h1>
+      <p class="reveal reveal-delay-2">Built specifically for Smart Money and Quarterly Theory traders. Works on any asset, any timeframe.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <div class="indicators-grid">
+
+        <div class="ind-card reveal reveal-delay-1">
+          <div class="ind-num">All-in-one QT indicator packed</div>
+          <h3>Kenpachi / Quarterly Theory [Pro+]</h3>
+
+          <div class="ind-slider" id="slider-qt">
+            <div class="ind-slider-track" id="slider-qt-track">
+              <img src="images/qt-pro-main.jpg" alt="QT Pro+ main preview" />
+              <img src="images/qt-pro-2.jpg" alt="QT Pro+ preview 2" />
+              <img src="images/qt-pro-3.jpg" alt="QT Pro+ preview 3" />
+              <img src="images/qt-pro-4.jpg" alt="QT Pro+ preview 4" />
+              <img src="images/qt-pro-5.jpg" alt="QT Pro+ preview 5" />
+              <img src="images/qt-pro-6.jpg" alt="QT Pro+ preview 6" />
+              <img src="images/qt-pro-7.jpg" alt="QT Pro+ preview 7" />
+              <img src="images/qt-pro-8.jpg" alt="QT Pro+ preview 8" />
+            </div>
+            <button class="ind-slider-btn prev" onclick="slideQT(-1)">&#8249;</button>
+            <button class="ind-slider-btn next" onclick="slideQT(1)">&#8250;</button>
+            <div class="ind-slider-dots" id="slider-qt-dots"></div>
+          </div>
+
+          <div class="ind-tags"><span>QT</span><span>SSMT</span><span>True Opens</span><span>STDV</span><span>NWOG</span><span>PSP</span></div>
+          <a href="indicators-plans.html" class="btn btn-ghost btn-sm">Get Access</a>
+        </div>
+
+
+      </div>
+
+      <!-- ACCESS BANNER -->
+      <div class="access-banner reveal">
+        <div>
+          <div class="label">Premium Required</div>
+          <h3>Save on Indicators</h3>
+          <p>All indicators are available for Premium members. Subscribe for Premium access and use the indicators for as long as your Premium subscription is active.</p>
+        </div>
+        <a href="premium.html" class="btn btn-primary" style="flex-shrink:0;">View Premium Plans</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-bottom">
+      <div class="footer-copy">© 2026 Kenpachi Trades. All rights reserved.</div>
+      <div class="footer-disclaimer">This website is for educational purposes only and does not constitute financial advice. Trading involves significant risk of loss and is not suitable for all investors. Past performance is not indicative of future results. Always consult a licensed financial advisor before making investment decisions. Affiliate links may be present.</div>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close" id="lightbox-close">&times;</span>
+    <button class="lightbox-prev" id="lightbox-prev">&#8249;</button>
+    <img id="lightbox-img" src="" alt="" />
+    <button class="lightbox-next" id="lightbox-next">&#8250;</button>
+  </div>
+
+  <script>
+    const burger = document.getElementById('burger');
+    const menu = document.getElementById('mobileMenu');
+    burger.addEventListener('click', () => menu.classList.toggle('open'));
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.07 });
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => observer.observe(el));
+
+    (function() {
+      const track = document.getElementById('slider-qt-track');
+      const dotsWrap = document.getElementById('slider-qt-dots');
+      if (!track) return;
+      const imgs = Array.from(track.querySelectorAll('img'));
+      const total = imgs.length;
+      let cur = 0;
+
+      for (let i = 0; i < total; i++) {
+        const d = document.createElement('span');
+        if (i === 0) d.classList.add('active');
+        d.addEventListener('click', () => goTo(i));
+        dotsWrap.appendChild(d);
+      }
+
+      function goTo(n) {
+        cur = (n + total) % total;
+        track.style.transform = 'translateX(-' + (cur * 100) + '%)';
+        dotsWrap.querySelectorAll('span').forEach((d, i) => d.classList.toggle('active', i === cur));
+      }
+      window.slideQT = (dir) => goTo(cur + dir);
+
+      // Lightbox
+      const lb = document.getElementById('lightbox');
+      const lbImg = document.getElementById('lightbox-img');
+      let lbCur = 0;
+
+      function lbOpen(n) {
+        lbCur = (n + total) % total;
+        lbImg.src = imgs[lbCur].src;
+        lb.classList.add('open');
+      }
+
+      imgs.forEach((img, i) => img.addEventListener('click', () => lbOpen(i)));
+      document.getElementById('lightbox-close').addEventListener('click', () => lb.classList.remove('open'));
+      document.getElementById('lightbox-prev').addEventListener('click', () => lbOpen(lbCur - 1));
+      document.getElementById('lightbox-next').addEventListener('click', () => lbOpen(lbCur + 1));
+      lb.addEventListener('click', (e) => { if (e.target === lb) lb.classList.remove('open'); });
+      document.addEventListener('keydown', (e) => {
+        if (!lb.classList.contains('open')) return;
+        if (e.key === 'Escape') lb.classList.remove('open');
+        if (e.key === 'ArrowLeft') lbOpen(lbCur - 1);
+        if (e.key === 'ArrowRight') lbOpen(lbCur + 1);
+      });
+    })();
+  </script>
+</body>
+</html>
